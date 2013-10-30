@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Rentclub::Application.config.secret_key_base = 'f303a5230d3cf4361613a79e8b5568ef1031e70a2778487a969eb56ae2d7bce40b7dc084cf4e825a74550f5662251bfb4e8f2575eb844b2d52c312136b553ad1'
+RentClub::Application.config.secret_key_base = 'f303a5230d3cf4361613a79e8b5568ef1031e70a2778487a969eb56ae2d7bce40b7dc084cf4e825a74550f5662251bfb4e8f2575eb844b2d52c312136b553ad1'

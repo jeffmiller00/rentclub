@@ -1,6 +1,13 @@
-Rentclub::Application.routes.draw do
+RentClub::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  match '/auth/:service/callback' => 'services#create', via: %i(get post)
+  match '/auth/failure' => 'services#failure', via: %i(get post)
+  match '/logout' => 'sessions#destroy', via: %i(get delete), as: :logout
+  match '/login' => 'sessions#new', via: %i(get), as: :login
+
+  resources :services, only: %i(index create destroy)
 
   # You can have the root of your site routed with "root"
   root "static_pages#index"
