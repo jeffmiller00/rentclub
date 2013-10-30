@@ -93,7 +93,7 @@ group :staging, :production do
   gem 'rails_12factor'
 end
 
-group :production, :development do
+group :development do
   gem 'thin'
 end
 
